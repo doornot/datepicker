@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>日期选择控件</title>
+	<link rel="stylesheet" href="calendar.css">
+	<script src="calendar.js"></script>
+</head>
+<body>
+	<p>选择日期 <input type="text" id="input_date" readonly></p>
+	<script>
+		window.onload = function() {
+			var oDate = document.getElementById('input_date');
+			new Calendar({
+				dateObj: oDate,
+			}, function(val){
+				console.log(val);
+			});
+		}
+	</script>
+</body>
+</html>
